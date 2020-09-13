@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+{% load static %}
+<html lang="en">
+    <head>
+        <link rel = "stylesheet" type = "text/css" href='{% static "styles.css" %}' >
+         <title>{% block title %}{% endblock %}</title>
+    </head>
+<body>
+    <h1>Моя домашняя библиотека</h1>
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <hr>
+    <h3>Спасибо что посетили мою библиотеку.</h3>
+    {% endblock %}
+</body>
+
+</html>

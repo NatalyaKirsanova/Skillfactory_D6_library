@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Мои читатели:</h3>
+<table>
+    <tr>
+  <th>Читатель</th>
+  <th>возврат</th>
+    </tr>
+    {% for reader in readers %}
+     <tr>
+      <td> {{ reader.name }}</td>
+         {% for book in reader.reader_books.all %}
+            <tr>
+            <td class="book"> {{ book.title }} </td>
+
+            <td class="book_compl"> {{ book.completion }} </td>
+            </tr>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+</html>
